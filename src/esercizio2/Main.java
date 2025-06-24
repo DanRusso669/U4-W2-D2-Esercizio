@@ -12,18 +12,18 @@ public class Main {
 
         List<Integer> randNums = new ArrayList<>();
 
-        firstNumsList(howManyNums, randNums);
+        System.out.println("Your numbers are: " + firstNumsList(howManyNums, randNums));
 
         List<Integer> reverseRandNums = new ArrayList<>(randNums);
 
         oddEven(true, randNums);
         oddEven(false, randNums);
 
-        reverse(reverseRandNums, randNums);
+        System.out.println("Your reverse list: " + reverse(reverseRandNums, randNums));
 
     }
 
-    public static void firstNumsList(int howManyNums, List<Integer> a) {
+    public static List<Integer> firstNumsList(int howManyNums, List<Integer> a) {
         Random r = new Random();
 
         for (int i = 0; i < howManyNums; i++) {
@@ -31,13 +31,13 @@ public class Main {
         }
 
         Collections.sort(a);
-        System.out.println("Your numbers are: " + a);
+        return a;
     }
 
-    public static void reverse(List<Integer> a, List<Integer> b) {
+    public static List<Integer> reverse(List<Integer> a, List<Integer> b) {
         Collections.reverse(a);
         b.addAll(a);
-        System.out.println("Your reverse list: " + b);
+        return b;
     }
 
     public static void oddEven(boolean a, List<Integer> list) {
