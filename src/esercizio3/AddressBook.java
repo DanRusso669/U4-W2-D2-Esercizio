@@ -14,9 +14,15 @@ public class AddressBook {
         rubrica.remove(name);
     }
 
-//    public static String getName(int phoneNum, Map<String, Integer> list) {
-//        }
-//    }
+    // https://docs.vultr.com/java/examples/get-key-from-hashmap-using-the-value
+
+    public static void getByPhone(int phoneNum, Map<String, Integer> list) {
+        for (Map.Entry<String, Integer> item : list.entrySet()) {
+            if (item.getValue().equals(phoneNum)) {
+                System.out.println(item.getKey());
+            }
+        }
+    }
 
     public static void getByName(String name) {
         System.out.println("The number you're looking for is " + rubrica.get(name));
