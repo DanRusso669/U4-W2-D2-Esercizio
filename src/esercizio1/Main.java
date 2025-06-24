@@ -31,8 +31,8 @@ public class Main {
 
             }
 
-            System.out.println("Your duplicates5: " + duplicates);
-            System.out.println("You entered " + userWords.size() + " different words.");
+            System.out.println("Your duplicates: " + duplicates);
+            System.out.println("You entered " + userWords.size() + " unique words.");
             System.out.println(userWords);
 
         } catch (NumberFormatException e) {
