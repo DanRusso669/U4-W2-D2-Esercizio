@@ -16,10 +16,10 @@ public class AddressBook {
 
     // https://docs.vultr.com/java/examples/get-key-from-hashmap-using-the-value
 
-    public static void getByPhone(int phoneNum, Map<String, Integer> list) {
-        for (Map.Entry<String, Integer> item : list.entrySet()) {
+    public static void getByPhone(int phoneNum) {
+        for (Map.Entry<String, Integer> item : rubrica.entrySet()) {
             if (item.getValue().equals(phoneNum)) {
-                System.out.println(item.getKey());
+                System.out.println("The name you're looking for is " + item.getKey());
             }
         }
     }
